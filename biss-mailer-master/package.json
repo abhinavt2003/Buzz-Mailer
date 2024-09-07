@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.18.1",
+    "npm": "6.14.15"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i install --prefix client && npm run build --prefix client",
+    "webhook": "lt -p 5000 -s jieofjeifecjencj23231231kdjelw"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "client": "0.0.1",
+    "concurrently": "^7.2.2",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "create-react-app": "^5.0.1",
+    "cros": "^1.0.1",
+    "cross": "^1.0.0",
+    "expres": "0.0.5",
+    "express": "^4.18.1",
+    "frontend": "^2.0.0-alpha.4",
+    "localtunnel": "^2.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.4.0",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0",
+    "path-parser": "^6.1.0",
+    "sendgrid": "^5.2.3",
+    "stripe": "^9.11.0"
+  }
+}
